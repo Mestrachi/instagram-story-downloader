@@ -1,0 +1,14 @@
+document.getElementById('storyForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const resultDiv = document.getElementById('result');
+
+    // Placeholder for fetching stories/highlights
+    resultDiv.innerHTML = `<p>Downloading stories for @${username}...</p>`;
+    
+    // Simulated download process (Replace this with actual download logic)
+    setTimeout(() => {
+        resultDiv.innerHTML = `<p>Stories for @${username} downloaded successfully!</p>`;
+    }, 2000);
+});
